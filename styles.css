@@ -803,10 +803,21 @@ h3 {
 @media (max-width: 760px) {
   body {
     font-size: 17px;
+    background:
+      linear-gradient(rgba(8, 8, 8, 0.76), rgba(8, 8, 8, 0.76)),
+      url("assets/download (2).jpg") center top / cover no-repeat,
+      linear-gradient(165deg, #120f0d 0%, #0d0a09 52%, #090707 100%);
+    background-attachment: scroll;
+  }
+
+  body::before,
+  body::after {
+    display: none;
   }
 
   .hero {
     padding: 6.2rem 1rem 0;
+    background-position: center top;
   }
 
   .value-strip {
