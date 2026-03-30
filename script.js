@@ -75,6 +75,8 @@ if (!prefersReducedMotion) {
 
 const bookTabs = document.querySelectorAll(".book-tab");
 const bookPages = document.querySelectorAll(".menu-page");
+const splash = document.getElementById("splash");
+const splashContinue = document.getElementById("splash-continue");
 
 if (bookTabs.length && bookPages.length) {
   bookTabs.forEach((tab) => {
@@ -95,3 +97,23 @@ if (bookTabs.length && bookPages.length) {
     });
   });
 }
+
+if (splash) {
+  document.body.classList.add("splash-open");
+
+  const closeSplash = () => {
+    splash.classList.add("is-exit");
+    document.body.classList.remove("splash-open");
+  };
+
+  splashContinue?.addEventListener("click", closeSplash);
+  splash.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeSplash));
+}
+
+function updateNavbarState() {
+  const shouldShrink = window.scrollY > 80;
+  document.body.classList.toggle("nav-scrolled", shouldShrink);
+}
+
+window.addEventListener("scroll", updateNavbarState, { passive: true });
+updateNavbarState();

@@ -6,12 +6,23 @@
   <title>Dhanigram | Royal Rajasthani Dining</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Marcellus&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@500;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="ambient-glow ambient-glow-1"></div>
-  <div class="ambient-glow ambient-glow-2"></div>
+  <section class="splash" id="splash">
+    <div class="splash-inner">
+      <p class="splash-brand">DHANIGRAM</p>
+      <p class="splash-tag">Best Rajasthani Vegetarian Dining In Udaipur</p>
+      <div class="splash-links">
+        <a href="#menu">View Menu</a>
+        <a href="#book">Reservations</a>
+        <a href="#visit">Directions</a>
+        <a href="tel:+919999999999">Call Us</a>
+      </div>
+      <button class="splash-continue" id="splash-continue" type="button">Continue To Site</button>
+    </div>
+  </section>
 
   <header class="hero" id="home">
     <nav class="top-nav">
@@ -19,7 +30,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#kitchen">Kitchen</a>
-        <a href="#services">Services</a>
+        <a href="#kitchen">Services</a>
         <a href="#specials">Specials</a>
         <a href="#menu">Menu</a>
         <a href="#visit">Visit</a>
@@ -30,14 +41,18 @@
 
     <div class="hero-content">
       <p class="subhead">The Village Restaurant, Udaipur</p>
-      <h1>Royal Rajasthani<br>Hospitality</h1>
+      <h1>Best Rajasthani<br>Vegetarian Dining</h1>
       <p class="lead">
-        Mitti walls, folk art, charpai charm, and rich flavors inspired by the soul of Rajasthan.
+        Elevated village flavors, warm hospitality, and a premium dining atmosphere in the heart of Udaipur.
       </p>
       <div class="hero-actions">
         <a href="#menu" class="cta">Explore Dhanigram Menu</a>
         <a href="#book" class="cta cta-ghost">Reserve Your Seat</a>
       </div>
+    </div>
+
+    <div class="hero-vertical-brand" aria-hidden="true">
+      <span>D</span><span>H</span><span>A</span><span>N</span><span>I</span><span>G</span><span>R</span><span>A</span><span>M</span>
     </div>
   </header>
 
@@ -89,7 +104,7 @@
 
     <section class="kitchen section-shell" id="kitchen">
       <div class="section-heading-wrap">
-        <p class="kicker">From Our Kitchen</p>
+        <p class="kicker">Kitchen &amp; Service</p>
         <h2>Freshly Cooked, Traditionally Served</h2>
       </div>
       <div class="kitchen-layout">
@@ -118,10 +133,8 @@
           </article>
         </div>
       </div>
-    </section>
 
-    <section class="services section-shell" id="services">
-      <div class="section-heading-wrap">
+      <div class="section-heading-wrap kitchen-services-heading">
         <p class="kicker">Dining Services</p>
         <h2>Everything You Need For A Great Meal</h2>
       </div>
@@ -133,14 +146,6 @@
         <div class="service-row">
           <h3>Quick Group Orders</h3>
           <p>Faster service workflow for team lunches and celebration bookings.</p>
-        </div>
-        <div class="service-row">
-          <h3>Celebration Support</h3>
-          <p>Birthdays and gatherings can be coordinated with pre-reserved tables.</p>
-        </div>
-        <div class="service-row">
-          <h3>Hygiene &amp; Clean Service</h3>
-          <p>Clean kitchen standards and attentive table service throughout the day.</p>
         </div>
       </div>
     </section>
@@ -190,7 +195,7 @@
 
       <div class="menu-book" id="menu-book">
         <div class="book-cover-top">
-          <img src="assets/elegant-decorative-ornate-restaurant-menu-template-with-food-and-drink-list-free-vector.jpg" alt="Ornate menu border inspiration" loading="lazy">
+          <div class="ornate-strip" aria-hidden="true"></div>
           <p>Handpicked from Dhanigram's original menu cards</p>
         </div>
 
