@@ -1,0 +1,616 @@
+{
+  "site": {
+    "name": "Adachi Restaurant",
+    "tagline": "Best Sushi & Japanese in Birmingham, MI",
+    "url": "https://adachirestaurant.com",
+    "theme": {
+      "palette": {
+        "background": "#0a0a0a",
+        "surface": "#111111",
+        "accent_gold": "#c9a96e",
+        "accent_light": "#f5f0e8",
+        "text_primary": "#ffffff",
+        "text_muted": "#888888",
+        "overlay": "rgba(0,0,0,0.55)"
+      },
+      "typography": {
+        "display": "Playfair Display",
+        "body": "Cormorant Garamond",
+        "ui": "Letter Gothic Std",
+        "letter_spacing_wide": "0.4em"
+      }
+    }
+  },
+
+  "pages": {
+    "home": {
+      "url": "/",
+      "sections": [
+
+        {
+          "id": "splash_interstitial",
+          "type": "interstitial_overlay",
+          "z_index": 9999,
+          "trigger": "page_load",
+          "content": {
+            "logo": {
+              "src": "/wp-content/uploads/2020/11/logo-1.png",
+              "alt": "Adachi Logo",
+              "animation": {
+                "type": "fade_in_scale",
+                "duration_ms": 800,
+                "easing": "ease-out",
+                "delay_ms": 200
+              }
+            },
+            "cta_links": [
+              { "label": "Order Online", "href": "https://order.adachirestaurant.com/", "style": "outline" },
+              { "label": "View Menu", "href": "/pdf/menu.pdf", "style": "outline" },
+              { "label": "Reservations", "href": "https://resy.com/cities/det/adachi", "style": "outline" },
+              { "label": "Directions", "href": "/location/", "style": "outline" }
+            ],
+            "dismiss_cta": {
+              "label": "Continue To Site",
+              "href": "#main",
+              "animation": {
+                "type": "fade_in",
+                "delay_ms": 1000
+              }
+            }
+          },
+          "animations": {
+            "entry": {
+              "type": "full_screen_fade_in",
+              "duration_ms": 600
+            },
+            "links_stagger": {
+              "type": "slide_up_fade_in",
+              "stagger_ms": 120,
+              "start_delay_ms": 600
+            },
+            "exit": {
+              "trigger": "click_continue",
+              "type": "curtain_wipe_up",
+              "duration_ms": 900,
+              "easing": "cubic-bezier(0.76, 0, 0.24, 1)"
+            }
+          }
+        },
+
+        {
+          "id": "navbar",
+          "type": "navigation",
+          "position": "fixed",
+          "z_index": 1000,
+          "variants": {
+            "desktop": {
+              "layout": "horizontal_split",
+              "left": {
+                "logo": {
+                  "src": "/wp-content/uploads/2020/11/logo.png",
+                  "alt": "Adachi Logo",
+                  "href": "/"
+                }
+              },
+              "center": {
+                "links": [
+                  { "label": "Home", "href": "/" },
+                  { "label": "About", "href": "/about/" },
+                  { "label": "Catering", "href": "/catering/" },
+                  { "label": "Gallery", "href": "/gallery/" },
+                  { "label": "Gift Cards", "href": "https://order.adachirestaurant.com/gift-card/" },
+                  { "label": "Location", "href": "/location/" }
+                ]
+              },
+              "right": {
+                "social_icons": [
+                  { "platform": "Facebook", "href": "https://www.facebook.com/AdachiRestaurant/", "icon": "facebook.png" },
+                  { "platform": "Instagram", "href": "https://www.instagram.com/adachirestaurant/", "icon": "instagram.png" }
+                ],
+                "cta_buttons": [
+                  { "label": "Make A Reservation", "href": "https://resy.com/cities/det/adachi", "style": "ghost_gold" },
+                  { "label": "Order Online", "href": "https://order.adachirestaurant.com/", "style": "filled_gold" }
+                ]
+              }
+            },
+            "mobile": {
+              "layout": "hamburger_drawer",
+              "drawer_direction": "right",
+              "logo": { "src": "/wp-content/uploads/2020/11/logo-1.png" },
+              "top_bar": {
+                "phone": "(248) 540 - 5900",
+                "cta_links": ["Order Online", "Reservations"]
+              }
+            }
+          },
+          "animations": {
+            "scroll_behavior": {
+              "type": "shrink_on_scroll",
+              "threshold_px": 80,
+              "transition": "background rgba(0,0,0,0.92) 0.3s, height 0.3s"
+            },
+            "link_hover": {
+              "type": "underline_draw",
+              "color": "#c9a96e",
+              "duration_ms": 250
+            },
+            "mobile_drawer_open": {
+              "type": "slide_in_from_right",
+              "duration_ms": 400,
+              "easing": "cubic-bezier(0.25, 1, 0.5, 1)"
+            },
+            "mobile_drawer_overlay": {
+              "type": "fade_in",
+              "opacity": 0.7,
+              "duration_ms": 300
+            }
+          }
+        },
+
+        {
+          "id": "hero",
+          "type": "fullscreen_hero",
+          "height": "100vh",
+          "content": {
+            "background": {
+              "type": "video_or_image_parallax",
+              "overlay": "rgba(0,0,0,0.50)",
+              "parallax_speed": 0.4
+            },
+            "vertical_text_logo": {
+              "letters": ["A", "D", "A", "C", "H", "I"],
+              "position": "right_center",
+              "orientation": "vertical",
+              "animation": {
+                "type": "letters_stagger_fade_in",
+                "stagger_ms": 80,
+                "duration_ms": 600,
+                "delay_ms": 1200
+              }
+            },
+            "headline": {
+              "text": "Best Sushi & Japanese Food In Michigan",
+              "tag": "h1",
+              "animation": {
+                "type": "split_words_slide_up",
+                "stagger_ms": 60,
+                "duration_ms": 700,
+                "delay_ms": 800
+              }
+            },
+            "subheadline": {
+              "lines": ["Japanese", "Inspired", "Cuisine"],
+              "animation": {
+                "type": "lines_fade_in_right",
+                "stagger_ms": 150,
+                "delay_ms": 1400
+              }
+            }
+          },
+          "animations": {
+            "scroll_indicator": {
+              "type": "bouncing_chevron",
+              "position": "bottom_center",
+              "loop": true
+            },
+            "parallax_bg": {
+              "type": "css_transform_translateY",
+              "trigger": "scroll",
+              "speed_ratio": 0.4
+            }
+          }
+        },
+
+        {
+          "id": "about_intro",
+          "type": "content_section",
+          "layout": "two_column_text_image",
+          "content": {
+            "eyebrow": "Adachi Birmingham",
+            "heading": "A Luxury Japanese Dining Destination",
+            "body_paragraphs": [
+              "Looking for the best Japanese-inspired restaurant in Birmingham, Michigan or searching for top sushi near Bloomfield Hills, Royal Oak, or West Bloomfield? Adachi, located in the historic Victorian Peabody Mansion, has become a luxury dining destination for guests across Metro Detroit and Oakland County.",
+              "Our culinary team blends years of expertise with innovative technique, creating a menu that features premium sashimi and nigiri flown in fresh from Japan, alongside artfully crafted small plates, large-format dishes, and signature cocktails.",
+              "Adachi stands apart by merging fine dining with a social, vibrant energy. The elegant dining room, lively sushi lounge, and polished cocktail bar create a stylish atmosphere where each visit feels memorable and curated."
+            ],
+            "cta": {
+              "label": "View Our Menu",
+              "href": "#menus",
+              "style": "text_arrow_gold"
+            },
+            "image": {
+              "src": "/wp-content/uploads/2020/11/home-pic-scaled.jpg",
+              "alt": "Our Mission",
+              "aspect_ratio": "4/5"
+            }
+          },
+          "animations": {
+            "section_entry": {
+              "trigger": "scroll_into_view",
+              "threshold": 0.2
+            },
+            "text_block": {
+              "type": "fade_in_up",
+              "duration_ms": 700,
+              "delay_ms": 0
+            },
+            "image_block": {
+              "type": "clip_reveal_bottom_to_top",
+              "duration_ms": 900,
+              "easing": "cubic-bezier(0.76, 0, 0.24, 1)"
+            },
+            "eyebrow": {
+              "type": "line_draw_left_to_right",
+              "color": "#c9a96e",
+              "duration_ms": 600
+            }
+          }
+        },
+
+        {
+          "id": "food_gallery_grid",
+          "type": "image_grid_section",
+          "heading": "Stylish and Flavorful Components",
+          "layout": "asymmetric_masonry",
+          "images": [
+            { "id": "img_1", "src": "/wp-content/uploads/2020/11/home-pic-1.png", "alt": "Food 1", "grid_area": "large_left" },
+            { "id": "img_2", "src": "/wp-content/uploads/2020/11/home-pic-2.png", "alt": "Food 2", "grid_area": "top_right" },
+            { "id": "img_3", "src": "/wp-content/uploads/2020/11/home-pic-3.png", "alt": "Food 3", "grid_area": "mid_right" },
+            { "id": "img_4", "src": "/wp-content/uploads/2020/11/home-pic-5.png", "alt": "Food 4", "grid_area": "bottom_left" },
+            { "id": "img_5", "src": "/wp-content/uploads/2020/11/home-pic-4.png", "alt": "Food 5", "grid_area": "bottom_right" }
+          ],
+          "animations": {
+            "section_heading": {
+              "type": "fade_in_up",
+              "trigger": "scroll_into_view"
+            },
+            "image_tiles": {
+              "type": "stagger_fade_scale_in",
+              "stagger_ms": 100,
+              "duration_ms": 700,
+              "trigger": "scroll_into_view",
+              "threshold": 0.15
+            },
+            "image_hover": {
+              "type": "zoom_overlay_reveal",
+              "scale": 1.05,
+              "overlay_opacity": 0.3,
+              "duration_ms": 400
+            }
+          }
+        },
+
+        {
+          "id": "menus",
+          "type": "menu_cards_section",
+          "anchor": "menus",
+          "heading": "View Our Menu",
+          "layout": "horizontal_scroll_cards",
+          "cards": [
+            {
+              "id": "delivery_menu",
+              "label": "DELIVERY MENU",
+              "image": "/wp-content/uploads/2020/11/adach-delivery-min.jpg",
+              "href": "/order"
+            },
+            {
+              "id": "dining_menu",
+              "label": "DINING MENU",
+              "image": "/wp-content/uploads/2020/11/adachi-dinner-menu-min.jpg",
+              "href": "/pdf/menu.pdf"
+            },
+            {
+              "id": "drink_menu",
+              "label": "DRINK MENU",
+              "image": "/wp-content/uploads/2020/11/home-menu.jpg",
+              "href": "/pdf/drink-menu.pdf"
+            },
+            {
+              "id": "happy_hour",
+              "label": "HAPPY HOUR",
+              "image": "/wp-content/uploads/2020/11/adachi-happy-hour-min.jpg",
+              "href": "/pdf/happy-hour.pdf"
+            },
+            {
+              "id": "dessert_menu",
+              "label": "DESSERT MENU",
+              "image": "/wp-content/uploads/2020/11/adachi-dessert-menu-min.jpg",
+              "href": "/pdf/dessert.pdf"
+            }
+          ],
+          "animations": {
+            "section_heading": {
+              "type": "fade_in_up",
+              "trigger": "scroll_into_view"
+            },
+            "cards_entry": {
+              "type": "stagger_slide_in_bottom",
+              "stagger_ms": 80,
+              "duration_ms": 600,
+              "trigger": "scroll_into_view",
+              "threshold": 0.1
+            },
+            "card_hover": {
+              "type": "lift_shadow_image_zoom",
+              "translateY_px": -8,
+              "shadow": "0 24px 60px rgba(0,0,0,0.5)",
+              "image_scale": 1.08,
+              "label_color_transition": "#c9a96e",
+              "duration_ms": 350
+            }
+          }
+        },
+
+        {
+          "id": "footer",
+          "type": "footer",
+          "content": {
+            "logo": {
+              "src": "/wp-content/uploads/2020/11/logo-1.png",
+              "href": "/"
+            },
+            "nav_links": [
+              { "label": "Home", "href": "/" },
+              { "label": "About", "href": "/about/" },
+              { "label": "Gallery", "href": "/gallery/" },
+              { "label": "Gift Cards", "href": "https://order.adachirestaurant.com/gift-card/" },
+              { "label": "Catering", "href": "/catering/" },
+              { "label": "Order", "href": "https://order.adachirestaurant.com/" },
+              { "label": "Contact", "href": "/location/" }
+            ],
+            "address": "325 S Old Woodward | Birmingham, MI 48009",
+            "hours": {
+              "weekdays": "Sunday - Thursday: 11:30am - 11pm",
+              "weekends": "Friday & Saturday: 11:30am - 12am",
+              "holiday_notes": [
+                "Christmas Eve: 11:30am - 5pm",
+                "Christmas Day: Closed",
+                "New Year's Day: Closed"
+              ]
+            },
+            "cta_buttons": [
+              { "label": "Order", "href": "https://order.adachirestaurant.com/" },
+              { "label": "Reserve", "href": "https://resy.com/cities/det/adachi" }
+            ],
+            "social_icons": [
+              { "platform": "Facebook", "href": "https://www.facebook.com/AdachiRestaurant/" },
+              { "platform": "Instagram", "href": "https://www.instagram.com/adachirestaurant/" }
+            ],
+            "legal": {
+              "copyright": "Copyright 2026",
+              "developer": { "name": "BMG MEDIA", "href": "https://bmgmediaco.com/" }
+            },
+            "seo_text_block": {
+              "heading": "Adachi – Serving Sushi Lovers Across Metro Detroit",
+              "body": "Located in the heart of Birmingham, Michigan, Adachi has become the top destination for guests searching for the best sushi near Bloomfield Hills, Royal Oak, West Bloomfield, Troy, Detroit, Clawson, Franklin, and Clarkston."
+            }
+          },
+          "animations": {
+            "footer_entry": {
+              "trigger": "scroll_into_view",
+              "type": "fade_in_up",
+              "duration_ms": 600
+            },
+            "link_hover": {
+              "type": "color_transition_to_gold",
+              "duration_ms": 200
+            },
+            "social_icon_hover": {
+              "type": "scale_glow",
+              "scale": 1.2,
+              "glow_color": "#c9a96e",
+              "duration_ms": 250
+            }
+          }
+        }
+
+      ]
+    },
+
+    "about": {
+      "url": "/about/",
+      "sections": [
+        { "id": "about_hero", "type": "page_hero", "heading": "About Adachi" },
+        { "id": "about_story", "type": "rich_text_section" },
+        { "id": "about_team", "type": "team_grid" }
+      ]
+    },
+
+    "catering": {
+      "url": "/catering/",
+      "sections": [
+        { "id": "catering_hero", "type": "page_hero", "heading": "Catering" },
+        { "id": "catering_info", "type": "content_columns" },
+        { "id": "catering_cta", "type": "cta_banner" }
+      ]
+    },
+
+    "gallery": {
+      "url": "/gallery/",
+      "sections": [
+        { "id": "gallery_hero", "type": "page_hero", "heading": "Gallery" },
+        {
+          "id": "gallery_grid",
+          "type": "masonry_lightbox_gallery",
+          "animations": {
+            "image_entry": {
+              "type": "stagger_fade_in",
+              "trigger": "scroll_into_view"
+            },
+            "lightbox_open": {
+              "type": "zoom_in_overlay",
+              "duration_ms": 350
+            },
+            "lightbox_close": {
+              "type": "fade_out_scale_down",
+              "duration_ms": 280
+            }
+          }
+        }
+      ]
+    },
+
+    "location": {
+      "url": "/location/",
+      "sections": [
+        { "id": "location_hero", "type": "page_hero", "heading": "Location" },
+        {
+          "id": "map_embed",
+          "type": "google_maps_embed",
+          "address": "325 S Old Woodward, Birmingham, MI 48009"
+        },
+        {
+          "id": "contact_info",
+          "type": "info_columns",
+          "columns": [
+            {
+              "label": "Address",
+              "value": "325 S Old Woodward, Birmingham, MI 48009"
+            },
+            {
+              "label": "Phone",
+              "value": "(248) 540 - 5900",
+              "href": "tel:2485405900"
+            },
+            {
+              "label": "Hours",
+              "value": "Sun–Thu: 11:30am–11pm | Fri–Sat: 11:30am–12am"
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "global_animations": {
+    "page_transition": {
+      "type": "curtain_wipe",
+      "direction": "bottom_to_top",
+      "color": "#0a0a0a",
+      "duration_ms": 700,
+      "easing": "cubic-bezier(0.76, 0, 0.24, 1)"
+    },
+    "scroll_reveal_default": {
+      "type": "fade_in_up",
+      "duration_ms": 650,
+      "translateY_start": 30,
+      "easing": "ease-out",
+      "threshold": 0.15,
+      "once": true
+    },
+    "cursor_custom": {
+      "enabled": true,
+      "default": {
+        "shape": "circle",
+        "size_px": 10,
+        "color": "#c9a96e"
+      },
+      "hover_link": {
+        "shape": "ring",
+        "size_px": 36,
+        "blend_mode": "difference"
+      },
+      "hover_image": {
+        "label": "VIEW",
+        "size_px": 64,
+        "background": "#c9a96e",
+        "color": "#000"
+      }
+    },
+    "smooth_scroll": {
+      "library": "Lenis",
+      "lerp": 0.1,
+      "duration_s": 1.2
+    },
+    "loading_screen": {
+      "type": "progress_bar_with_logo",
+      "bar_color": "#c9a96e",
+      "background": "#0a0a0a",
+      "exit_animation": {
+        "type": "split_panels_slide_out",
+        "duration_ms": 800
+      }
+    }
+  },
+
+  "components": {
+    "button": {
+      "variants": {
+        "filled_gold": {
+          "background": "#c9a96e",
+          "color": "#000",
+          "hover": {
+            "type": "fill_wipe_reverse",
+            "duration_ms": 300
+          }
+        },
+        "ghost_gold": {
+          "border": "1px solid #c9a96e",
+          "color": "#c9a96e",
+          "hover": {
+            "type": "fill_in",
+            "background": "#c9a96e",
+            "color": "#000",
+            "duration_ms": 280
+          }
+        },
+        "text_arrow_gold": {
+          "color": "#c9a96e",
+          "underline": "animated",
+          "arrow": "→",
+          "hover": {
+            "type": "arrow_slide_right",
+            "gap_px": 8,
+            "duration_ms": 250
+          }
+        }
+      }
+    },
+    "section_divider": {
+      "type": "thin_gold_line",
+      "width": "60px",
+      "color": "#c9a96e",
+      "animation": {
+        "type": "draw_left_to_right",
+        "trigger": "scroll_into_view",
+        "duration_ms": 600
+      }
+    },
+    "image_hover_overlay": {
+      "type": "gradient_overlay",
+      "gradient": "linear-gradient(to top, rgba(0,0,0,0.7), transparent)",
+      "transition_duration_ms": 350
+    }
+  },
+
+  "external_integrations": {
+    "reservations": {
+      "platform": "Resy",
+      "url": "https://resy.com/cities/det/adachi"
+    },
+    "online_ordering": {
+      "platform": "Custom",
+      "url": "https://order.adachirestaurant.com/"
+    },
+    "gift_cards": {
+      "url": "https://order.adachirestaurant.com/gift-card/"
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/AdachiRestaurant/",
+      "instagram": "https://www.instagram.com/adachirestaurant/"
+    }
+  },
+
+  "seo": {
+    "meta_title": "Adachi Restaurant | Best Sushi & Japanese in Birmingham, MI",
+    "meta_description": "Premium Japanese-inspired cuisine in Birmingham, MI. Fresh sashimi, nigiri, sushi, cocktails. Located in the historic Victorian Peabody Mansion.",
+    "primary_keywords": [
+      "best sushi Birmingham MI",
+      "Japanese restaurant Michigan",
+      "sushi near Bloomfield Hills",
+      "fine dining sushi Metro Detroit",
+      "upscale sushi Oakland County"
+    ],
+    "schema_type": "Restaurant"
+  }
+}
